@@ -28,6 +28,8 @@ public class GridBehaviour : MonoBehaviour
             for (int j = -Columns/2; j < Columns/2; j++)
             {
                 GameObject obj = Instantiate(GrassTile, new Vector3(0.0f + i * Scale, 0.0f + j * Scale, 0.0f), new Quaternion()); // rimasto al riempimento della griglia con gli oggetti
+                obj.name = string.Format("tile_{0}_{1}", i, j);
+                obj.transform.SetParent(gameObject.transform);
             }
         }
     }
