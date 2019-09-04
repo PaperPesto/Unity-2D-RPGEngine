@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 870201848}
   - component: {fileID: 870201850}
   - component: {fileID: 870201851}
-  - component: {fileID: 870201852}
   m_Layer: 0
   m_Name: GrassSprite
   m_TagString: Untagged
@@ -197,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870201847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.44, y: -3.36, z: -2.5043252}
+  m_LocalPosition: {x: -8.994, y: -2.991, z: -2.5043252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -241,21 +240,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &870201852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870201847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 0.64123744, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &946780398
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,27 +315,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946780398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.456, y: 0.504, z: -3.8446918}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -9.1, y: -1.37, z: -3.8446918}
+  m_LocalScale: {x: 0.12298, y: 0.12298, z: 0.12298}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &946780401
-MonoBehaviour:
+--- !u!61 &946780401
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946780398}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.91764706}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.54, y: 12.54}
+    newSize: {x: 12.54, y: 12.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.54, y: 12.54}
+  m_EdgeRadius: 0
 --- !u!1 &1011518655
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +465,10 @@ MonoBehaviour:
   StartingGrid: {x: 0, y: 0}
   GrassTile: {fileID: 870201847}
   EarthTile: {fileID: 0}
+  Player1: {fileID: 946780398}
+  Player1Pos: {x: -1, y: 2}
+  Player2: {fileID: 0}
+  Player2Pos: {x: 0, y: 0}
 --- !u!4 &1673444342
 Transform:
   m_ObjectHideFlags: 0

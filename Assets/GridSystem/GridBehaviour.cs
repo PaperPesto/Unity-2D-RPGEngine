@@ -9,10 +9,17 @@ public class GridBehaviour : MonoBehaviour
     public GameObject GrassTile;
     public GameObject EarthTile;
 
+    // Gestione giocatori
+    public GameObject Player1;
+    public Vector2Int Player1Pos;
+    public GameObject Player2;
+    public Vector2Int Player2Pos;
+
     // Start is called before the first frame update
     void Start()
     {
         GenerateGrid();
+        MovePlayers();
     }
 
     // Update is called once per frame
@@ -34,9 +41,21 @@ public class GridBehaviour : MonoBehaviour
         }
     }
 
+    void MovePlayers()
+    {
+        Player1.transform.position = new Vector3(Player1Pos.x, Player1Pos.y, 0);
+        //Player2.transform.position = new Vector3(Player2Pos.x, Player2Pos.y, 0);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawSphere(new Vector3(StartingGrid.x, StartingGrid.y, 0), 0.1f);
+    }
+
+    public void MovePlayer1(Vector2Int newpos)
+    {
+        Player1Pos = newpos;
+        MovePlayers();
     }
 }

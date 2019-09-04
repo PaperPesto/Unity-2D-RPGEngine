@@ -20,12 +20,12 @@ public class FocusTile : MonoBehaviour
     private void OnMouseEnter()
     {
         Debug.Log("onMouseOver" + gameObject.name);
-        gameObject.GetComponent<Outline>().enabled = true;
+        //gameObject.GetComponent<Outline>().enabled = true;
     }
 
     private void OnMouseExit()
     {
         Debug.Log("onMouseExit" + gameObject.name);
-        gameObject.GetComponent<Outline>().enabled = false;
+        //gameObject.GetComponent<Outline>().enabled = false;
     }
 }
