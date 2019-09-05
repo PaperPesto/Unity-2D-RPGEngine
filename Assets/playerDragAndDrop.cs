@@ -24,5 +24,8 @@ public class playerDragAndDrop : MonoBehaviour
         var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         GetComponent<VirtualPosition>().UpdatePositionFloat(pos);
+
+        Vector2 absolutemovement = transform.position - transform.GetChild(0).transform.position;
+        transform.GetChild(0).transform.position = absolutemovement;
     }
 }
