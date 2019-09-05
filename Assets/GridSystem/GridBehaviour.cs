@@ -44,7 +44,7 @@ public class GridBehaviour : MonoBehaviour
     void MovePlayers()
     {
         Player1.transform.position = new Vector3(Player1Pos.x, Player1Pos.y, 0);
-        //Player2.transform.position = new Vector3(Player2Pos.x, Player2Pos.y, 0);
+        Player2.transform.position = new Vector3(Player2Pos.x, Player2Pos.y, 0);
     }
 
     private void OnDrawGizmos()
@@ -56,6 +56,12 @@ public class GridBehaviour : MonoBehaviour
     public void MovePlayer1(Vector2Int newpos)
     {
         Player1Pos = newpos;
+        MovePlayers();
+    }
+
+    public void MovePlayer2(Vector2Int newpos)
+    {
+        Player2Pos = newpos;
         MovePlayers();
     }
 }
