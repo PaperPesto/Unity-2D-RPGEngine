@@ -19,8 +19,8 @@ public class HealthComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float scale = (float)ActualHealth / (float)MaxHealth;
-        transform.GetChild(0).transform.localScale = new Vector2(10 * scale, 1);
-        transform.GetChild(0).transform.localPosition = new Vector2(0, -8);
+        //float scale = (float)ActualHealth / (float)MaxHealth;
+        //transform.GetChild(0).transform.localScale = new Vector2(10 * scale, 1);
+        //transform.GetChild(0).transform.localPosition = new Vector2(0, -8);
     }
 }
