@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerGridMovement : MonoBehaviour
 {
@@ -10,6 +8,8 @@ public class PlayerGridMovement : MonoBehaviour
         Debug.Log("drag " + gameObject.name + " to " + pos);
 
         gameObject.transform.position = new Vector3(pos.x, pos.y, 0);
+
+        gameObject.GetComponent<VirtualPosition>().UpdatePositionFloat(pos);
 
         //if (gameObject.name == "Player1")
         //{
