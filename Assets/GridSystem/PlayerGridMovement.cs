@@ -9,11 +9,14 @@ public class PlayerGridMovement : MonoBehaviour
         var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Debug.Log("drag " + gameObject.name + " to " + pos);
 
-        //if(gameObject.name == "Player1")
+        gameObject.transform.position = new Vector3(pos.x, pos.y, 0);
+
+        //if (gameObject.name == "Player1")
         //{
-        //    //gameObject.transform.position = pos;
+        //    gameObject.transform.position = pos;
         //    GameObject.Find("GridGenerator").GetComponent<GridBehaviour>().MovePlayer1(new Vector2Int(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.y)));
-        //} else if (gameObject.name == "Player2")
+        //}
+        //else if (gameObject.name == "Player2")
         //{
         //    GameObject.Find("GridGenerator").GetComponent<GridBehaviour>().MovePlayer2(new Vector2Int(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.y)));
         //}
